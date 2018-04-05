@@ -11112,7 +11112,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n*{\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n}\nbody,html{\n\t\t\theight: 100%;\n}\n.im_box{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: column;\n\t\t\theight: 100%;\n}\n.msgbody{\n\t\t\twidth: 100%;\n\t\t\tflex-grow: 1;\n}\n.msgsend{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: row;\n\t\t\twidth: 100%;\n}\n.msgsend button{\n\t\t\twidth: 60px;\n\t\t\ttext-align: center;\n\t\t\tfont-size: 18px;\n}\n.msgsend input{\n\t\t\tflex-grow: 1;\n\t\t\tborder-radius: 10px;\n}\n.borders{\n\t\t\tborder: 1px solid #999;\n}\n", ""]);
+exports.push([module.i, "\n*{\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n}\nbody,html{\n\t\t\theight: 100%;\n}\n.im_box{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: column;\n\t\t\theight: 100%;\n}\n.msgbody{\n\t\t\twidth: 100%;\n\t\t\tflex-grow: 1;\n}\n.msgsend{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: row;\n\t\t\twidth: 100%;\n}\n.msgsend button{\n\t\t\twidth: 60px;\n\t\t\ttext-align: center;\n\t\t\tfont-size: 18px;\n}\n.msgsend input{\n\t\t\tflex-grow: 1;\n\t\t\tborder-radius: 10px;\n}\n.borders{\n\t\t\tborder: 1px solid #999;\n\t\t\theight: 40px;\n\t\t\twidth: 50%;\n\t\t\tmargin-left: 15px;\n}\n", ""]);
 
 // exports
 

@@ -99,5 +99,8 @@ import $ from "jquery";
 		}
 		.borders{
 			border: 1px solid #999;
+			height: 40px !important;
+			width: 50%;
+			margin-left: 15px;
 		}
 </style>
