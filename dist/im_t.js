@@ -8356,13 +8356,16 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 /* harmony default export */ __webpack_exports__["a"] = ({
 	data() {
 		return {
-			id: '',
-			val: "talk"
+			val: "talk",
+			uId: "u" + Math.random() * 10
 		};
 	},
 	sockets: {
-		connect: function () {
+		connect: function (data) {
+			console.log("uid=", this.uId);
 			this.id = this.$socket.id;
+			console.log("socket id=", this.$socket.id);
+			this.$socket.emit(2000, { uId: this.uId });
 		},
 
 		customEmit: function (val) {
@@ -8371,8 +8374,9 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 	},
 
 	mounted() {
-		this.$socket.emit("connect", "123");
-		this.$socket.on("event_talk", function (data) {
+
+		//连接成功
+		this.$socket.on(1000, function (data) {
 			console.log(data);
 		});
 		//监听公屏发言
@@ -11112,7 +11116,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n*{\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n}\nbody,html{\n\t\t\theight: 100%;\n}\n.im_box{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: column;\n\t\t\theight: 100%;\n}\n.msgbody{\n\t\t\twidth: 100%;\n\t\t\tflex-grow: 1;\n}\n.msgsend{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: row;\n\t\t\twidth: 100%;\n}\n.msgsend button{\n\t\t\twidth: 60px;\n\t\t\ttext-align: center;\n\t\t\tfont-size: 18px;\n}\n.msgsend input{\n\t\t\tflex-grow: 1;\n\t\t\tborder-radius: 10px;\n}\n.borders{\n\t\t\tborder: 1px solid #999;\n\t\t\theight: 40px;\n\t\t\twidth: 50%;\n\t\t\tmargin-left: 15px;\n}\n", ""]);
+exports.push([module.i, "\n*{\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n}\nbody,html{\n\t\t\theight: 100%;\n}\n.im_box{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: column;\n\t\t\theight: 100%;\n}\n.msgbody{\n\t\t\twidth: 100%;\n\t\t\tflex-grow: 1;\n}\n.msgsend{\n\t\t\tdisplay: flex;\n\t\t\tdisplay: -webkit-flex;\n\t\t\tflex-direction: row;\n\t\t\twidth: 100%;\n}\n.msgsend button{\n\t\t\twidth: 60px;\n\t\t\ttext-align: center;\n\t\t\tfont-size: 18px;\n}\n.msgsend input{\n\t\t\tflex-grow: 1;\n\t\t\tborder-radius: 10px;\n}\n.borders{\n\t\t\tborder: 1px solid #999;\n\t\t\theight: 40px !important;\n\t\t\twidth: 50%;\n\t\t\tmargin-left: 15px;\n\t\t\tmargin-top: 10px;\n\t\t\tline-height: 40px;\n}\n", ""]);
 
 // exports
 

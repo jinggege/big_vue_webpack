@@ -21,14 +21,14 @@ import $ from "jquery";
 	export default{
 	  data(){
 	      return{
-						id:'',
-						val:"talk"
+						val:"talk",
+						uId:"u"+Math.random()*10
 	      }
 	  },
 	  sockets:{
-	    connect: function(){
-	      this.id=this.$socket.id
-	      
+	    connect: function(data){
+				//加入房间消息
+				this.$socket.emit(2000,{uId:this.uId,clientId:this.$socket.id});
 	    },
 	    
 	    customEmit: function(val){
@@ -37,15 +37,13 @@ import $ from "jquery";
 	  },
 	  
 	  mounted(){
-	  	this.$socket.emit("connect","123");
-	  	this.$socket.on("event_talk",function(data){
-	  		console.log(data);
-			});
-			//监听公屏发言
+			//监听公屏发言data {} 含有  msg 消息   uId 消息来源
 			this.$socket.on(2002,function(data){
+				
 				console.log(data);
-				$(".msgbody").append("<div class='borders'>"+data.msg+"</div>");
-			})
+				$(".msgbody").append("<div id='"+data.uId+"' class='borders'>"+data.msg+"</div>");
+			});
+
 			
 	  },
 	  
@@ -102,5 +100,7 @@ import $ from "jquery";
 			height: 40px !important;
 			width: 50%;
 			margin-left: 15px;
+			margin-top: 10px;
+			line-height: 40px;
 		}
 </style>
