@@ -5,15 +5,7 @@ var webpack = require('webpack');
 module.exports = {
     /* 输入文件 */
     entry:{
-        main_h5      :'./src/js/h5/enter/main_h5.js',
-        main_course  :'./src/js/h5/enter/course.js',
-        enroll       :'./src/js/h5/enter/enroll.js',
-        enroll_result:'./src/js/h5/enter/enroll_result.js',
-        account      :'./src/js/h5/enter/account.js',
-        userinfo      :'./src/js/h5/enter/userinfo.js',
-        admin_index_pc :'./src/js/pc/enter/pc_ad_index.js',
-        admin_login_pc :'./src/js/pc/enter/pc_ad_login.js',
-        im_test :'./src/js/pc/enter/im_test.js'
+        im_t :'./src/h5/enter/im_t.js'
     },
     output: {
         /* 输出目录，没有则新建 */
