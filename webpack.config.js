@@ -5,7 +5,8 @@ var webpack = require('webpack');
 module.exports = {
     /* 输入文件 */
     entry:{
-        im_t :'./src/h5/enter/im_t.js'
+        im_t :'./src/h5/enter/im_t.js',
+        platform_index:'./src/pc/enter/platform_index.js'
     },
     output: {
         /* 输出目录，没有则新建 */
